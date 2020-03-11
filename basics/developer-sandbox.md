@@ -2,7 +2,7 @@
 
 To test in the developer sandbox, the app has to be built as a developer build in Xcode. This will most often be used by the developer to quickly test on-device during the development process, but you can provision up to 100 devices per account and distribute developer builds to QA and other internal testers without having to go through TestFlight and their beta app review.
 
-Testing in the developer sandbox requires a sandbox account. Apple’s documentation on this is good and will hopefully stay up to date: [Apple: Create a sandbox tester account](Chttps://help.apple.com/app-store-connect/#/dev8b997bee1)
+Testing in the developer sandbox requires a sandbox account. Apple’s documentation on this is good and will hopefully stay up to date: [Apple: Create a sandbox tester account](https://help.apple.com/app-store-connect/#/dev8b997bee1)
 
 To sign in with this new sandbox account, go to the Settings app, tap iTunes & App Store, then scroll to the bottom and you should see the Sandbox Account section. Here you can log in and out of different sandbox accounts for testing. If you accidentally use a sandbox account on the production App Store, that account will no longer work in the sandbox. When in doubt, create a fresh sandbox account and re-test.
 
