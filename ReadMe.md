@@ -1,5 +1,5 @@
 # The Ultimate Guide to Subscription Testing on iOS
-Testing App Store subscriptions is incredibly important, but also very hard to do well. Apple’s subscription related documentation is... um... _lacking_ and Apple has never been great about providing testing resources. This guide will evolve over time as Apple makes changes to subscriptions and we figure out better ways to test. Please submit pull requests for anything we got wrong or to provide details or tips we missed.
+Testing App Store subscriptions is incredibly important, but also very hard to do well. Apple’s subscription related documentation is... um... _lacking_ and Apple has never been great about providing testing resources. This guide will evolve over time as Apple makes changes to subscriptions and we figure out better ways to test. **Please submit pull requests** for anything we got wrong or to provide details or tips we missed.
 
 ## The Basics
 
