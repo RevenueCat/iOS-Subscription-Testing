@@ -1,4 +1,4 @@
-## Developer Sandbox Testing
+## Sandbox Testing
 
 To test in the developer sandbox, the app has to be built as a developer build in Xcode. This will most often be used by the developer to quickly test on-device during the development process, but you can provision up to 100 devices per account and distribute developer builds to QA and other internal testers without having to go through TestFlight and their beta app review.
 
@@ -16,8 +16,9 @@ The developer sandbox is notoriously unreliable. It’s unclear whether Apple in
 
 Subscription length has been significantly shortened for testing purposes. This allows users to quickly test multiple renewals and expirations.
 
-Actual subscription duration -> Test duration
+Actual subscription duration -> [Test duration](https://help.apple.com/app-store-connect/#/dev7e89e149d)
 
+3 days -> 2 minutes
 1 week -> 3 minutes
 1 month -> 5 minutes
 2 months -> 10 minutes
@@ -25,9 +26,11 @@ Actual subscription duration -> Test duration
 6 months -> 30 minutes
 1 year -> 1 hour
 
-The subscription will automatically renew 6 times per account per 8 hour window, then the subscription will automatically expire at the end of the final subscription period. These renewals happen automatically whether the app is open or not, just like renewals on the App Store. Unlike the App Store, there’s no option to cancel, so there’s no way to directly test cancelation. There’s also no way to test subscription management.
+(The 3 day duration isn’t documented anywhere, but can be found by looking at sandbox transactions)
 
-Each automatic renewal is added to the payment queue. The transaction, or transactions (depending on how much time has passed), is processed the next time the app is opened. If you’re refreshing the receipts server-side, these additional transactions should be see in the receipt.
+The subscription will automatically renew 6 times per account. After 6 renewals the subscription will automatically stop renewing. These renewals happen automatically whether the app is open or not, just like renewals on the App Store. Unlike the App Store, there’s no option to unsubscribe or get a refund, so there’s no way to directly test those scenarios. There’s also no way to test subscription management.
+
+Each automatic renewal is added to the payment queue. The transaction, or transactions (depending on how much time has passed), is processed the next time the app is opened. Make sure you close the app and re-open it to see the updated receipt. If you’re refreshing the receipts server-side, these additional transactions should be seen in the receipt.
 
 ### Testing procedures
 
@@ -67,7 +70,8 @@ Active subscription should be found and the app should change to the subscribed 
 
 1. Subscribe to a monthly subscription
 2. Install the app on a different device before the subscription expires
-3. Launch the app
-4. If required, tap “Restore Purchases” button
+3. Sign in with the same sandbox account
+4. Launch the app
+5. If required, tap “Restore Purchases” button
 
 Active subscription should be found and the app should change to the subscribed state.

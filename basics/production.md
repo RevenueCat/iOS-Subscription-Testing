@@ -11,7 +11,7 @@ For an app that has yet to be released on the App Store, getting an early versio
 
 Since this app has gone through approval, subscriptions will perform exactly as they will when the app is live on the App Store, including charging testers who subscribe and allowing testers to manage the subscription in the App Store app. Promo codes can be given to testers so that they can test the app for free. Subscriptions paid for via promo code work exactly like paid subscriptions, except that they don’t auto-renew.
 
-One thing to watch out for is that the app and IAP might not both propagate to the App Store at the same time. It can take up to 24 hours for an app and IAP to be available on the App Store and the app might show up hours before the IAP. This means that you’ll be able to download the production version of the app, but the app won’t be able to see the production IAP. Be patient and try again 24+ hours after the app and IAP were approved.
+One thing to watch out for is that the app and IAP might not both propagate to the App Store at the same time. This seems to only impact new IAP, not IAP that have previously been released with the app. It can take up to 24 hours for a new app or app update and any new IAP to be available on the App Store and the app/update might show up hours before the IAP. This means that you’ll be able to download the production version of the app, but the app won’t be able to see the production IAP. Be patient and try again 24+ hours after the app and IAP were approved.
 
 One other thing to note here is that apps downloaded via promo codes before the app is live on the App Store don’t seem to have a proper receipt file in the download bundle. The receipt should be refreshed with a purchase, but this issue could be used to test the rare scenario where real users of the app somehow end up in a state where an accurate receipt is not contained in the app bundle.
 
@@ -31,7 +31,7 @@ Since it’s impossible to test cancellations in the sandbox environments, it’
 4. Wait a minute or two to give Apple time to add the cancelation to the payment queue
 5. Re-open the app
 
-At this point the cancelation event should be read from the payment queue and the app should revert to the unsubscribed state.
+At this point auto-renew should be disabled on the receipt and the app should revert to the unsubscribed state after the current subscription period ends.
 
 **Testing refunds:**
 
