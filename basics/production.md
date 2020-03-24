@@ -17,6 +17,8 @@ One other thing to note here is that apps downloaded via promo codes before the 
 
 One thing to watch out for is that the app and in-app purchases (products) might not both propagate to the App Store at the same time. This seems to only impact new products, not products that have previously been released with the app. **It can take more than 24 hours for a new app or app update and any new products to be available on the App Store and the app/update might show up hours before the products can be purchased**. This means that you’ll be able to download the production version of the app, but the app won’t be able to buy any products. Be patient and try again 24+ hours after the app and products were approved.
 
+See tips on [Adding new products](additional/random.md#adding-new-products) for more info.
+
 
 ## Testing renewals and expirations
 
@@ -26,7 +28,7 @@ Testing renewals and expirations is difficult in production since the subscripti
 
 Since it’s impossible to test cancellations in the sandbox environments, it’s important to test these in production.
 
-**Testing cancelation:**
+**Testing cancelations:**
 
 1. Subscribe to a monthly subscription
 2. Make sure app enters subscribed state with features unlocked
@@ -34,14 +36,14 @@ Since it’s impossible to test cancellations in the sandbox environments, it’
 4. Wait a minute or two to give Apple time to add the cancelation to the payment queue
 5. Re-open the app
 
-At this point auto-renew should be disabled on the receipt and the app should revert to the unsubscribed state after the current subscription period ends.
+At this point auto-renew should be disabled on the receipt and the app should remain in the subscribed state but revert to the unsubscribed state after the current billing period ends.
 
 **Testing refunds:**
 
 1. Subscribe to a monthly subscription
 2. Make sure app enters subscribed state with features unlocked
-3. Call Apple and ask for a refund
-4. Wait a minute or two to give Apple time to add the refund to the payment queue
+3. Contact Apple and [ask for a refund](https://support.apple.com/HT204084)
+4. Wait a day to give Apple time to process the refund and add it to the payment queue
 5. Re-open the app
 
 At this point the refund event should be read from the payment queue and the app should revert to the unsubscribed state.
