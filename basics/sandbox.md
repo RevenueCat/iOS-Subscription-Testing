@@ -39,35 +39,35 @@ Each automatic renewal is added to the payment queue. The transaction, or transa
 
 **Testing renewals and expiration:**
 
-1. Subscribe to a monthly subscription
-2. Close the app and set a 20 minute timer
-3. After 20 minutes, launch the app again to make sure your app is still in the subscribed state
-4. Close the app and set another 20 minute timer
-5. After 20 more minutes (approx. 40 minutes since originally purchasing the subscription), launch the app again and it should now revert to the un-subscribed state and allow the user to re-subscribe.
+- [ ] Subscribe to a monthly subscription
+- [ ] Close the app and set a 20 minute timer
+- [ ] After 20 minutes, launch the app again to make sure your app is still in the subscribed state
+- [ ] Close the app and set another 20 minute timer
+- [ ] After 20 more minutes (approx. 40 minutes since originally purchasing the subscription), launch the app again and it should now revert to the un-subscribed state and allow the user to re-subscribe.
 
 **Test restoring purchases after expiration:**
 
-1. Subscribe to a monthly subscription
-2. Close the app and wait 35-40 minutes
-3. Launch the app (should revert to the un-subscribed state)
-4. Tap “Restore Purchases” button
-5. No active subscription should be found and the user should be shown a message to that effect.
+- [ ] Subscribe to a monthly subscription
+- [ ] Close the app and wait 35-40 minutes
+- [ ] Launch the app (should revert to the un-subscribed state)
+- [ ] Tap “Restore Purchases” button
+- [ ] No active subscription should be found and the user should be shown a message to that effect.
 
 **Test restoring purchases during active subscription:**
 
 A big caveat in the sandbox environment is that there is no receipt file on the device until a purchase is made. This differs from production where a receipt file is generated at the time of install. This means that to fully test restores in sandbox, you may need to modify your app slightly in development builds.
 
-1. Subscribe to a monthly subscription
-2. Use a button/gesture or somehow revert app to the unsubscribed state 
-3. Tap “Restore Purchases” button
-4. If done before the 35 minute subscription cycle, an active subscription should be found and the app should change to the subscribed state.
+- [ ] Subscribe to a monthly subscription
+- [ ] Use a button/gesture or somehow revert app to the unsubscribed state 
+- [ ] Tap “Restore Purchases” button
+- [ ] If done before the 35 minute subscription cycle, an active subscription should be found and the app should change to the subscribed state.
 
 
 **Test upgrades / downgrades / crossgrades:**
 Changing subscription products **is not** supported in sandbox. This is a limitation of the sandbox environment and is related to the accelerated renewal rates and the in-ability to manage subscriptions.
 
 ### Important Takeaways
-✅ Subscriptions will renew at an accelerated rate in sandbox
-✅ Subscriptions will be automatically canceled and cannot be managed by the user
-✅ There's no receipt available in sandbox until a purchase is made
-✅ Upgrades / crossgrades don't work in sandbox
+- Subscriptions will renew at an accelerated rate in sandbox
+- Subscriptions will be automatically canceled and cannot be managed by the user
+- There's no receipt available in sandbox until a purchase is made
+- Upgrades / crossgrades don't work in sandbox
