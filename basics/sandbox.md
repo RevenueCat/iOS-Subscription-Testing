@@ -8,7 +8,7 @@ To sign in with this new sandbox account, go to the Settings app, tap iTunes & A
 
 (The Sandbox Account section in the Settings app was introduced in iOS 12, when testing on iOS 11 or before, you’ll need to sign out of your production App Store account, then sign in with a test account when prompted within the app.)
 
-## Sandbox reliability
+### Sandbox reliability
 
 The developer sandbox is notoriously unreliable. It’s unclear whether Apple intentionally degrades performance of the developer sandbox to mimic issues that might arise in production, or if Apple uses the developer sandbox as their own sandbox and accidentally breaks it frequently. Either way, keep in mind that even if your code is working as expected, things will sometimes go awry with the developer sandbox. When this happens it’s a great opportunity to look for ways to handle unexpected errors.
 
