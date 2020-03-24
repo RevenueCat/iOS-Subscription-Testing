@@ -66,7 +66,7 @@ A big caveat in the sandbox environment is that there is no receipt file on the 
 **Test upgrades / downgrades / crossgrades:**
 Changing subscription products **is not** supported in sandbox. This is a limitation of the sandbox environment and is related to the accelerated renewal rates and the in-ability to manage subscriptions.
 
-### Important Takeaways
+## Important Takeaways
 - Subscriptions will renew at an accelerated rate in sandbox
 - Subscriptions will be automatically canceled and cannot be managed by the user
 - There's no receipt available in sandbox until a purchase is made
