@@ -53,3 +53,6 @@ Ideally, your app will automatically determine the subscription state and unlock
 4. If required, tap “Restore Purchases” button
 
 Active subscription should be found and the app should change to the subscribed state.
+
+___________________________________________________________________
+_If you see anything that needs to be fixed or have anything to add, please submit a pull request!_

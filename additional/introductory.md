@@ -10,4 +10,5 @@ One thing to note is that once an account has used an introductory offer, that a
 
 [Apple: Implementing Introductory Offers in Your App](https://developer.apple.com/documentation/storekit/in-app_purchase/subscriptions_and_offers/implementing_introductory_offers_in_your_app)
 
-_If you see anything that needs to be fixed, or have anything to add, please submit a pull request!_
+___________________________________________________________________
+_If you see anything that needs to be fixed or have anything to add, please submit a pull request!_

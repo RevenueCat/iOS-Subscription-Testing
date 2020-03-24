@@ -17,3 +17,6 @@ When an app is downloaded from the App Store, there should always be a receipt i
 You’d think iOS would automatically download a fresh receipt in cases like this, but no. This is why it’s important to handle the edge case of an app bundle without a receipt, and provide an easy to find Restore Purchases button to retrieve that receipt.
 
 Trying to automatically download a fresh receipt in these cases seems like a good idea, but refreshing a receipt triggers a system level request for password, which many users will just cancel, so it’s best to find other ways to deal with this.
+
+___________________________________________________________________
+_If you see anything that needs to be fixed or have anything to add, please submit a pull request!_
