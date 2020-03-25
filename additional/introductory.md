@@ -1,5 +1,6 @@
 # Testing Free Trials and Other Introductory Offers
 
+
 Since free trials are a form of introductory offer, most subscription app developers do use this feature even if they don’t realize it.
 
 As Apple mentions, the primary thing to test here is that your app presents introductory offers only to users that are eligible for the offer.
@@ -14,4 +15,6 @@ In our experience, for purposes of app review it's sufficient to always assume t
 
 [Apple: Implementing Introductory Offers in Your App](https://developer.apple.com/documentation/storekit/in-app_purchase/subscriptions_and_offers/implementing_introductory_offers_in_your_app)
 
-_If you see anything that needs to be fixed, or have anything to add, please submit a pull request!_
+___________________________________________________________________
+_If you see anything that needs to be fixed or have anything to add, please submit a pull request!_
+

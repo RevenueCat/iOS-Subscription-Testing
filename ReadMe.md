@@ -12,6 +12,7 @@ The developer sandbox is the first line of defense. Make sure you understand the
 While not especially helpful with beta testers, you should definitely spend some time testing the production sandbox before shipping. TestFlight behaves like the Sandbox, but uses production App Store accounts.
 
 ### [3. Production Testing](basics/production.md)
+
 There are a few tricks to testing in production even before a release hits the App Store, but you’ll also want to keep testing live on the App Store as the app is updated.
 
 ## Additional Testing Strategies
@@ -29,4 +30,5 @@ Apps with auto-renewable subscriptions can offer a discounted price for a specif
 Here’s a handy checklist to make sure you’ve covered your bases while testing subscriptions.
 
 ### [Random Tips](additional/random.md)
+
 There are too many random, poorly documented behaviors to create a page for each. This is a collection of random things that might be helpful to know.

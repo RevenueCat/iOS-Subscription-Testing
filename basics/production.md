@@ -38,6 +38,7 @@ Since it’s impossible to test cancellations in the sandbox environments, it’
 
 At this point auto-renew should be disabled on the receipt and the app should remain in the subscribed state but revert to the unsubscribed state after the current billing period ends.
 
+
 **Testing refunds:**
 
 1. Subscribe to a monthly subscription
@@ -58,3 +59,7 @@ Ideally, your app will automatically determine the subscription state and unlock
 4. If required, tap “Restore Purchases” button
 
 Active subscription should be found and the app should change to the subscribed state.
+
+___________________________________________________________________
+_If you see anything that needs to be fixed or have anything to add, please submit a pull request!_
+

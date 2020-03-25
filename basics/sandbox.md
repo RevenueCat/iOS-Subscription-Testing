@@ -1,5 +1,6 @@
 # Sandbox Testing
 
+
 To test in the developer sandbox, the app has to be built as a developer build in Xcode. This will most often be used by the developer to quickly test on-device during the development process, but you can provision up to 100 devices per account and distribute developer builds to QA and other internal testers without having to go through TestFlight and their beta app review.
 
 Testing in the developer sandbox requires a sandbox account. Apple’s documentation on this is good and will hopefully stay up to date: [Apple: Create a sandbox tester account](https://help.apple.com/app-store-connect/#/dev8b997bee1)
@@ -71,3 +72,6 @@ Changing subscription products **is not** supported in sandbox. This is a limita
 - Subscriptions will be automatically canceled and cannot be managed by the user
 - There's no receipt available in sandbox until a purchase is made
 - Upgrades / crossgrades don't work in sandbox
+
+___________________________________________________________________
+_If you see anything that needs to be fixed or have anything to add, please submit a pull request!_
