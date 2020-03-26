@@ -15,6 +15,7 @@ In our experience, for purposes of app review it's sufficient to always assume t
 
 [Apple: Implementing Introductory Offers in Your App](https://developer.apple.com/documentation/storekit/in-app_purchase/subscriptions_and_offers/implementing_introductory_offers_in_your_app)
 
+
 ___________________________________________________________________
 _If you see anything that needs to be fixed or have anything to add, please submit a pull request!_
 

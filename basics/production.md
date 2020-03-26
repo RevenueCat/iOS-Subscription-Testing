@@ -17,7 +17,7 @@ One other thing to note here is that apps downloaded via promo codes before the 
 
 One thing to watch out for is that the app and in-app purchases (products) might not both propagate to the App Store at the same time. This seems to only impact new products, not products that have previously been released with the app. **It can take more than 24 hours for a new app or app update and any new products to be available on the App Store and the app/update might show up hours before the products can be purchased**. This means that you’ll be able to download the production version of the app, but the app won’t be able to buy any products. Be patient and try again 24+ hours after the app and products were approved.
 
-See tips on [Adding new products](additional/random.md#adding-new-products) for more info.
+See tips on [Adding new products](https://github.com/RevenueCat/iOS-Subscription-Testing/blob/master/additional/random.md#adding-new-products) for more info.
 
 
 ## Testing renewals and expirations
@@ -59,6 +59,7 @@ Ideally, your app will automatically determine the subscription state and unlock
 4. If required, tap “Restore Purchases” button
 
 Active subscription should be found and the app should change to the subscribed state.
+
 
 ___________________________________________________________________
 _If you see anything that needs to be fixed or have anything to add, please submit a pull request!_

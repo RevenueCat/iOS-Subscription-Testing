@@ -31,7 +31,6 @@ Subscription length has been significantly shortened for testing purposes. This 
 6 months | 30 minutes
 1 year | 1 hour
 
-[Apple reference](https://help.apple.com/app-store-connect/#/dev7e89e149d)
 (The 3 day duration isn’t documented anywhere, but can be found by looking at sandbox transactions)
 
 The subscription will automatically renew up to 6 times per account. The actual number of renewals is random. After at most 6 renewals the subscription will automatically stop renewing. These renewals happen automatically whether the app is open or not, just like renewals on the App Store. Unlike the App Store, there’s no option to unsubscribe or get a refund, so there’s no way to directly test those scenarios. There’s also no way to test subscription management.
@@ -43,29 +42,36 @@ Each automatic renewal is added to the payment queue. The transaction, or transa
 
 **Testing renewals and expiration:**
 
-- [ ] Subscribe to a monthly subscription
-- [ ] Close the app and set a 20 minute timer
-- [ ] After 20 minutes, launch the app again to make sure your app is still in the subscribed state
-- [ ] Close the app and set another 20 minute timer
-- [ ] After 20 more minutes (approx. 40 minutes since originally purchasing the subscription), launch the app again and it should now revert to the un-subscribed state and allow the user to re-subscribe.
+1. Subscribe to a monthly subscription
+2. Close the app and set a 20 minute timer
+3. After 20 minutes, launch the app again to make sure your app is still in the subscribed state
+4. Close the app and set another 20 minute timer
+5. After 20 more minutes (approx. 40 minutes since originally purchasing the subscription), launch the app again and it should now revert to the un-subscribed state and allow the user to re-subscribe.
 
 **Test restoring purchases after expiration:**
 
-- [ ] Subscribe to a monthly subscription
-- [ ] Close the app and wait 35-40 minutes
-- [ ] Launch the app (should revert to the un-subscribed state)
-- [ ] Tap “Restore Purchases” button
-- [ ] No active subscription should be found and the user should be shown a message to that effect.
+1. Subscribe to a monthly subscription
+2. Close the app and wait 35-40 minutes
+3. Launch the app (should revert to the un-subscribed state)
+4. Tap “Restore Purchases” button
+5. No active subscription should be found and the user should be shown a message to that effect.
 
 **Test restoring purchases during active subscription:**
 
-A big caveat in the sandbox environment is that there is no receipt file on the device until a purchase is made. This differs from production where a receipt file is generated at the time of install. This means that to fully test restores in sandbox, you may need to modify your app slightly in development builds.
+One big caveat in the sandbox environment is that there is no receipt file on the device until a purchase is made. This differs from the production sandbox and production environments where a receipt file is generated at the time of install. To fully test restores in the sandbox, you need to add a button, gesture, or other means to revert the app to the unsubscribed state.
 
-- [ ] Subscribe to a monthly subscription
-- [ ] Use a button/gesture or somehow revert app to the unsubscribed state 
-- [ ] Tap “Restore Purchases” button
-- [ ] If done before the 35 minute subscription cycle, an active subscription should be found and the app should change to the subscribed state.
+1. Subscribe to a monthly subscription
+2. Use a button/gesture to revert app to the unsubscribed state 
+3. Tap “Restore Purchases” button
+4. If done before the 35 minute subscription cycle, an active subscription should be found and the app should change to the subscribed state.
 
+**Test restoring purchases across devices:**
+
+1. Subscribe to a monthly subscription on device A
+2. Install the app on a device B before the subscription expires
+3. On device B, log into the same sandbox account that was used on device A
+4. Launch the app on device B
+5. Tap “Restore Purchases” button
 
 **Test upgrades / downgrades / crossgrades:**
 Changing subscription products **is not** supported in sandbox. This is a limitation of the sandbox environment and is related to the accelerated renewal rates and the in-ability to manage subscriptions.
@@ -75,6 +81,12 @@ Changing subscription products **is not** supported in sandbox. This is a limita
 - Subscriptions will be automatically canceled and cannot be managed by the user
 - There's no receipt available in sandbox until a purchase is made
 - Upgrades / crossgrades don't work in sandbox
+
+## References
+
+[Apple: Test in-app purchases](https://help.apple.com/app-store-connect/#/dev7e89e149d)
+[Apple: Testing In-App Purchase Transactions](https://developer.apple.com/documentation/storekit/in-app_purchase/testing_in-app_purchase_transactions)
+
 
 ___________________________________________________________________
 _If you see anything that needs to be fixed or have anything to add, please submit a pull request!_

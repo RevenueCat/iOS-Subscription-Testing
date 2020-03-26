@@ -10,6 +10,8 @@ In App Store Connect you can generate promo codes for subscriptions, but there a
 
 3. If the app is a paid app, you’ll have to generate a separate promo code to download the app first.
 
+[Apple: Promo codes overview](https://help.apple.com/app-store-connect/#/dev50869de4a)
+
 
 ## Missing receipts
 
@@ -29,6 +31,7 @@ Once your app is live with subscriptions, you can add new products and get them 
 3. Apple approves `monthly_product_2`.
 4. Wait 24 hours.
 5. Switch your app to display `monthly_product_2` through some remote configuration setting.
+
 
 ___________________________________________________________________
 _If you see anything that needs to be fixed or have anything to add, please submit a pull request!_
