@@ -36,7 +36,7 @@ Keep in mind that while TestFlight uses the Sandbox environment on App Store, th
 | TestFlight | Production Sandbox | Production |
 | App Store | Production | Production |
 
-## Testing procedures
+## Testing Procedures
 
 The testing procedure in TestFlight should be [the same as in sandbox](https://github.com/RevenueCat/iOS-Subscription-Testing/blob/master/basics/sandbox.md#testing-procedures).
 

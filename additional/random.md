@@ -12,6 +12,9 @@ In App Store Connect you can generate promo codes for subscriptions, but there a
 
 [Apple: Promo codes overview](https://help.apple.com/app-store-connect/#/dev50869de4a)
 
+### TestFlight Invites
+
+You do not need to collect the exact email people use for their App Store accounts in order to invite them to TestFlight. An invite can be sent to any email address. When someone taps the unique link sent in a TestFlight email it will associate the invite with whatever App Store account is currently logged into that device. Future beta emails still go to the original email address and Apple does not add the App Store account email to your TestFlight tester list.
 
 ## Missing receipts
 
@@ -31,6 +34,27 @@ Once your app is live with subscriptions, you can add new products and get them 
 3. Apple approves `monthly_product_2`.
 4. Wait 24 hours.
 5. Switch your app to display `monthly_product_2` through some remote configuration setting.
+
+## Subscription disclosures
+
+Apple used to require apps to disclose all sorts of terms and conditions on any paywall screen. Those requirements have since been relaxed. You don’t even have to link to your Terms of Service and Privacy Policy on the paywall anymore (but they must be linked somewhere inside the app).
+
+The only 3 things now required on a Paywall are:
+
+1. Title of auto-renewing subscription
+2. Length of subscription
+3. Price of subscription, and price per unit if appropriate
+
+[Apple: Attracting Subscribers](https://developer.apple.com/app-store/subscriptions/#attracting-subscribers)
+[Tweet: Jacob Eiting](https://twitter.com/jeiting/status/1137043638985216000?s=21)
+
+## Paywall rejections
+
+Over the past several years Apple has gone through several rounds of tightening App Review restrictions on paywalls. As of March 2020, here are the 3 most important things to keep in mind:
+
+1. Make sure the **price** is more prominent (as in larger font and/or more bold) than “Free Trial” or other similar language
+2. Any mention of “Free” or “Trial” must be accompanied by the actual price, even on pages/buttons that lead to your paywall
+3. The price displayed must be the actual price they are going to pay. eg. you can’t say “$1 per month billed annually” you must say “11.99 per year”
 
 
 ___________________________________________________________________
