@@ -22,14 +22,35 @@ As with the developer sandbox, subscription length has been significantly shorte
 [Apple reference](https://help.apple.com/app-store-connect/#/dev7e89e149d)
 (The 3 day duration isn’t documented anywhere, but can be found by looking at sandbox transactions)
 
-The subscription will automatically renew ~6 times per account. After ~6 renewals the subscription will automatically stop renewing. These renewals happen automatically whether the app is open or not, just like renewals on the App Store. Unlike the App Store, there’s no option to unsubscribe or get a refund, so there’s no way to directly test those scenarios. There’s also no way to test subscription management.
-
+The subscription will automatically renew up to 6 times per account. The actual number of renewals is random. After at most 6 renewals the subscription will automatically stop renewing. These renewals happen automatically whether the app is open or not, just like renewals on the App Store. Unlike the App Store, there’s no option to unsubscribe or get a refund, so there’s no way to directly test those scenarios. There’s also no way to test subscription management.
 
 Each automatic renewal is added to the payment queue. The transaction, or transactions (depending on how much time has passed), is processed the next time the app is opened. Make sure you close the app and re-open it to see the updated receipt. If you’re refreshing the receipts server-side, these additional transactions should be seen in the receipt.
 
 ### Testing Tips
 
 To make testing easier, it can be helpful to add a button or secret gesture to the TestFlight build of your app that switches the app between various purchase states (make sure to set a build flag that removes this in the App Store build!). Make sure to [mention this in the TestFlight release notes](additional/testflight.md) to recruit a few beta testers in helping to test the paywall.
+
+Keep in mind that while TestFlight uses the Sandbox environment on App Store, the build that is submitted to TestFlight should be the same one that gets published to App Store. If you have a backend and you have a staging and a production environment on the backend, this will mean that TestFlight runs on the production backend, but the purchases go to the Sandbox environment. A typical setup is: 
+
+| App Version | App Store | Backend |
+| :-------------: | :-------------: | :-----: |
+| Sandbox App | Sandbox App Store | Staging backend |
+| TestFlight App | Sandbox App Store | Production backend |
+| App Store App | Production App Store | Production backend |
+
+### Testing procedures
+
+**Testing renewals and expiration:**
+
+1. Subscribe to a monthly subscription
+2. Close the app and set a 5 minute timer
+3. Launch the app
+4. If prompt is displayed, enter password
+
+At this point the app should continue to operate in the subscribed state. Repeat steps 2-4 several more times (or just close the app and wait) until 35 minutes has passed (6 renewals at 5 minutes each plus the original 5 minute subscription). The app should now revert to the un-subscribed state and allow the user to re-subscribe.
+
+**Test restoring purchases after expiration:**
+
 
 ## Testing procedures
 

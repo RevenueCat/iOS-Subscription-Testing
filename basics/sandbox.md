@@ -1,13 +1,15 @@
 # Sandbox Testing
 
 
-To test in the developer sandbox, the app has to be built as a developer build in Xcode. This will most often be used by the developer to quickly test on-device during the development process, but you can provision up to 100 devices per account and distribute developer builds to QA and other internal testers without having to go through TestFlight and their beta app review.
+To test in the developer sandbox, the app has to be built as a developer build in Xcode. This will most often be used by the developer to quickly test on-device during the development process, but you can provision devices and distribute developer builds to QA and other internal testers without having to go through TestFlight and their beta app review. To prevent apps from being distributed widely outside the App Store, Apple limits device provisioning to 100 per device type (iPhone, iPad, Apple Watch, Apple TV and Mac) for a total of 500 devices.
 
 Testing in the developer sandbox requires a sandbox account. Apple’s documentation on this is good and will hopefully stay up to date: [Apple: Create a sandbox tester account](https://help.apple.com/app-store-connect/#/dev8b997bee1)
 
 To sign in with this new sandbox account, go to the Settings app, tap iTunes & App Store, then scroll to the bottom and you should see the Sandbox Account section. Here you can log in and out of different sandbox accounts for testing. If you accidentally use a sandbox account on the production App Store, that account will no longer work in the sandbox. When in doubt, create a fresh sandbox account and re-test.
 
 (The Sandbox Account section in the Settings app was introduced in iOS 12, when testing on iOS 11 or before, you’ll need to sign out of your production App Store account, then sign in with a test account when prompted within the app.)
+
+Although they should work independently, we've seen issues where if your device is logged in with a production account and a sandbox account simultaneously, sandbox purchases don't work. We recommend signing in only to sandbox in test devices if possible. 
 
 ### Sandbox reliability
 
@@ -17,7 +19,7 @@ That said, **never assume an issue will magically fix itself when you launch in 
 
 ## Subscription duration in the developer sandbox
 
-Subscription length has been significantly shortened for testing purposes. This allows users to quickly test multiple renewals and expirations.
+Subscription length has been significantly shortened for testing purposes. This allows developers to quickly test multiple renewals and expirations.
 
 | Actual subscription duration  | Sandbox duration |
 | --- | --- |
@@ -32,7 +34,8 @@ Subscription length has been significantly shortened for testing purposes. This 
 [Apple reference](https://help.apple.com/app-store-connect/#/dev7e89e149d)
 (The 3 day duration isn’t documented anywhere, but can be found by looking at sandbox transactions)
 
-The subscription will automatically renew ~6 times per account. After ~6 renewals the subscription will automatically stop renewing. These renewals happen automatically whether the app is open or not, just like renewals on the App Store. Unlike the App Store, there’s no option to unsubscribe or get a refund, so there’s no way to directly test those scenarios. There’s also no way to test subscription management.
+The subscription will automatically renew up to 6 times per account. The actual number of renewals is random. After at most 6 renewals the subscription will automatically stop renewing. These renewals happen automatically whether the app is open or not, just like renewals on the App Store. Unlike the App Store, there’s no option to unsubscribe or get a refund, so there’s no way to directly test those scenarios. There’s also no way to test subscription management.
+
 
 Each automatic renewal is added to the payment queue. The transaction, or transactions (depending on how much time has passed), is processed the next time the app is opened. Make sure you close the app and re-open it to see the updated receipt. If you’re refreshing the receipts server-side, these additional transactions should be seen in the receipt.
 
