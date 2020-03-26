@@ -1,6 +1,6 @@
 ## Sandbox Testing
 
-To test in the developer sandbox, the app has to be built as a developer build in Xcode. This will most often be used by the developer to quickly test on-device during the development process, but you can provision a limited amount of devices per account and distribute developer builds to QA and other internal testers without having to go through TestFlight and their beta app review. The number of devices you can register is 100 per device type, with the available types being iPhone, iPad, Apple Watch, Apple TV and Mac. Each of them has 100 slots, for a total max of 500 devices.
+To test in the developer sandbox, the app has to be built as a developer build in Xcode. This will most often be used by the developer to quickly test on-device during the development process, but you can provision devices and distribute developer builds to QA and other internal testers without having to go through TestFlight and their beta app review. To prevent apps from being distributed widely outside the App Store, Apple limits device provisioning to 100 per device type (iPhone, iPad, Apple Watch, Apple TV and Mac) for a total of 500 devices.
 
 Testing in the developer sandbox requires a sandbox account. Apple’s documentation on this is good and will hopefully stay up to date: [Apple: Create a sandbox tester account](https://help.apple.com/app-store-connect/#/dev8b997bee1)
 
