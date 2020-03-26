@@ -18,13 +18,13 @@ Subscription length has been significantly shortened for testing purposes. This 
 
 Actual subscription duration -> [Test duration](https://help.apple.com/app-store-connect/#/dev7e89e149d)
 
-3 days -> 2 minutes
-1 week -> 3 minutes
-1 month -> 5 minutes
-2 months -> 10 minutes
-3 months -> 15 minutes
-6 months -> 30 minutes
-1 year -> 1 hour
+- 3 days -> 2 minutes
+- 1 week -> 3 minutes
+- 1 month -> 5 minutes
+- 2 months -> 10 minutes
+- 3 months -> 15 minutes
+- 6 months -> 30 minutes
+- 1 year -> 1 hour
 
 (The 3 day duration isn’t documented anywhere, but can be found by looking at sandbox transactions)
 
