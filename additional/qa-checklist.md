@@ -1,22 +1,22 @@
 ## QA Checklist
 
-### Developer sandbox testing
+### Developer Sandbox Testing
 
-- [ ] Test purchase
-- [ ] Test renewals and expiration
-- [ ] Test restoring purchases after expiration
-- [ ] Test restoring purchases during active subscription
+- [ ] Test subscription purchase
+- [ ] Test subscription renewal and expiration
+- [ ] Test restoring purchases after subscription expiration
+- [ ] Test restoring purchases during an active subscription
 - [ ] Test restoring purchases across devices
 
-### Production sandbox testing
+### Production Sandbox Testing
 
-- [ ] Test purchase
-- [ ] Test renewals and expiration
-- [ ] Test restoring purchases after expiration
-- [ ] Test restoring purchases during active subscription
+- [ ] Test subscription purchase
+- [ ] Test subscription renewal and expiration
+- [ ] Test restoring purchases after subscription expiration
+- [ ] Test restoring purchases during an active subscription
 - [ ] Test restoring purchases across devices
 
-### Production testing
+### Production Testing
 
 - [ ] Pre-launch purchase test
 - [ ] Launch day purchase test

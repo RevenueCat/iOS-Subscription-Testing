@@ -1,12 +1,12 @@
 # Testing Free Trials and Other Introductory Offers
 
-Since free trials are a form of introductory offer, most subscription app developers do use this feature even if they don’t realize it.
+Since free trials are a type of introductory offer, most subscription app developers use this feature even if they don’t realize it.
 
-As Apple mentions, the primary thing to test here is that your app presents introductory offers only to users that are eligible for the offer.
+The most important thing here is to make sure your app only presents introductory offers to users that are eligible for them.
 
-One thing to note is that once an account has used an introductory offer, that account is no longer eligible to use an introductory offer for any product within the same subscription group. So if you test a free trial, that free trial will no longer be available again to that account (there doesn’t seem to be a way to reset this other than to create a fresh sandbox account).
+One thing to note is that once an account has redeemed an introductory offer, that account is no longer eligible for introductory offers for any product within the same subscription group. So if you test a free trial, that offer will no longer be available to that account (there doesn’t seem to be a way to reset this other than to create a fresh sandbox account).
 
-Ideally your app should check introductory offer eligibility and hide “Free Trial” and other offer related messaging when the user is not eligible. However, getting this wrong is a frequent cause for rejection, so err on the side of making everyone eligible instead of everyone not eligible.
+Ideally your app should check introductory offer eligibility and hide “Free Trial” and other offer-related messaging when the user is not eligible. However, getting this wrong is a frequent cause for rejection, so err on the side of making everyone eligible instead of everyone ineligible.
 
 ## References
 
@@ -17,4 +17,3 @@ Ideally your app should check introductory offer eligibility and hide “Free Tr
 
 ___________________________________________________________________
 _If you see anything that needs to be fixed or have anything to add, please submit a pull request!_
-
