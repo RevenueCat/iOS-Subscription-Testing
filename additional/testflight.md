@@ -1,4 +1,4 @@
-## Communicating with TestFlight Beta Testers
+# Communicating with TestFlight Beta Testers
 
 Because of the limitations of testing subscriptions with TestFlight (especially the short duration of subscriptions in the production sandbox), many developers choose to automatically unlock all features for beta testers.
 
