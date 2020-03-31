@@ -3,7 +3,7 @@ iOS Subscription Offers can only be redeemed in sandbox _after_ a subscription h
 
 ## References
 
-[Apple: Implementing Subscription Offers in Your App] (https://developer.apple.com/documentation/storekit/in-app_purchase/subscriptions_and_offers/implementing_subscription_offers_in_your_app)
+[Apple: Implementing Subscription Offers in Your App](https://developer.apple.com/documentation/storekit/in-app_purchase/subscriptions_and_offers/implementing_subscription_offers_in_your_app)
 
 [Apple: Setting Up Subscription Offers](https://developer.apple.com/documentation/storekit/in-app_purchase/subscriptions_and_offers/setting_up_subscription_offers)
 
