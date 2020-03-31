@@ -6,25 +6,9 @@ Unfortunately, the production sandbox purchase process does not mimic the App St
 
 ## Subscription Duration in the Production Sandbox
 
-In both the developer sandbox and the production sandbox,, subscription length has been significantly shortened for testing purposes. This allows you to quickly test multiple renewals and expirations.
+Subscription length has been significantly shortened for testing purposes. This allows developers to quickly test multiple renewals and expirations. Check the [Sandbox Testing[(https://github.com/RevenueCat/iOS-Subscription-Testing/blob/master/basics/sandbox.md) section for details and caveats.
 
-| App Store Subscription/Trial Duration  | Sandbox Duration |
-| --- | --- |
-3 days | 2 minutes
-1 week | 3 minutes
-1 month | 5 minutes
-2 months | 10 minutes
-3 months | 15 minutes
-6 months | 30 minutes
-1 year | 1 hour
-
-(The 3-day duration isn’t documented anywhere but can be found by looking at sandbox transactions.)
-
-The subscription will automatically renew up to 6 times per account. The actual number of renewals is random. After at most 6 renewals, the subscription will automatically stop renewing. These renewals happen automatically whether the app is open or not, just like renewals on the App Store. Unlike on the App Store, there’s no option to unsubscribe or get a refund, so there’s no way to directly test those scenarios. There’s also no way to test subscription management.
-
-Each automatic renewal is added to the payment queue. The transaction (or transactions, depending on how much time has passed) is processed the next time the app is opened. Make sure you close the app and reopen it to see the updated receipt. If you’re refreshing the receipts server-side, these additional transactions should be visible in the receipt.
-
-### Testing Tips
+## Testing Tips
 
 To make testing easier, it can be helpful to add a button or secret gesture to the TestFlight build of your app that switches the app between various purchase states (make sure to set a build flag that removes this in the App Store build!). And don’t forget to [mention this in the TestFlight release notes](https://github.com/RevenueCat/iOS-Subscription-Testing/blob/master/additional/testflight.md) when recruiting beta testers to help test the paywall.
 
