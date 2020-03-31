@@ -6,7 +6,7 @@ Unfortunately, the production sandbox purchase process does not mimic the App St
 
 ## Subscription Duration in the Production Sandbox
 
-Subscription length has been significantly shortened for testing purposes. This allows developers to quickly test multiple renewals and expirations. Check the [Sandbox Testing[(https://github.com/RevenueCat/iOS-Subscription-Testing/blob/master/basics/sandbox.md) section for details and caveats.
+Subscription length has been significantly shortened for testing purposes. This allows developers to quickly test multiple renewals and expirations. Check the [Sandbox Testing](https://github.com/RevenueCat/iOS-Subscription-Testing/blob/master/basics/sandbox.md) section for details and caveats.
 
 ## Testing Tips
 
