@@ -23,7 +23,7 @@ The limitations of production sandbox subscription testing makes it tough for be
 ### [Testing Free Trials and Other Introductory Offers](additional/introductory.md)
 You can offer a discounted price or free trial of an auto-renewable subscription so new customers can experience the value of your subscription before paying full price.
 
-### [Testing Promotional Offers](additional/promotional.md)
+### [Testing Subscription Offers](additional/offers.md)
 Apps with auto-renewable subscriptions can offer a discounted price for a specific duration for existing or previously subscribed customers.
 
 ### [QA Checklist](additional/qa-checklist.md)
