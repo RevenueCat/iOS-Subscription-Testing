@@ -12,7 +12,7 @@ You can generate promo codes for subscriptions in App Store Connect, but there a
 
 [Apple: Promo Codes Overview](https://help.apple.com/app-store-connect/#/dev50869de4a)
 
-### TestFlight Invites
+## TestFlight Invites
 
 You don’t need to collect a user’s App Store account email address in order to invite them to TestFlight. Invites can be sent to any email address. When a user taps the unique link they receive in a TestFlight email, it will associate the invite with whatever App Store account is currently logged in to that device. Future beta emails still go to the original email address, and Apple does not add the App Store account email address to your TestFlight tester list.
 
