@@ -4,7 +4,7 @@ To test in the developer sandbox, the app has to be built as a developer build i
 
 Testing in the developer sandbox requires a sandbox account. Apple’s [documentation](https://help.apple.com/app-store-connect/#/dev8b997bee1) on this is good and will hopefully stay up to date. 
 
-To sign in with your new sandbox account, go to the Settings app, tap “iTunes & App Store”, then scroll to the bottom to the Sandbox Account section. Here you can log in and out of different sandbox accounts for testing. If you accidentally use a sandbox account on the production App Store, that account will no longer work in the sandbox. When in doubt, create a fresh sandbox account and retest.
+To sign in with your new sandbox account for the first time, you must attempt to make a purchase in a developer build of your app. Once you have logged into a sandbox account using this method, you can then go to the Settings app, tap “iTunes & App Store”, then scroll to the bottom to the Sandbox Account section. Here you can log in and out of different sandbox accounts for testing. If you accidentally use a sandbox account on the production App Store, that account will no longer work in the sandbox. When in doubt, create a fresh sandbox account and retest.
 
 (The Sandbox Account section of the Settings app was introduced in iOS 12. When testing on iOS 11 or before, you’ll need to sign out of your production App Store account, then sign in with a test account when prompted within the app.)
 
@@ -72,7 +72,8 @@ One big caveat in the sandbox environment is that there is no receipt file on th
 5. Tap the “Restore Purchases” button.
 
 **Test upgrades, downgrades, and crossgrades:**
-Changing subscription products **is not** supported in sandbox. This is a limitation of the sandbox environment related to the accelerated renewal rates and the in-ability to manage subscriptions.
+
+Because the sandbox environment doesn’t have a subscription management UI like the production App Store, you’ll need to expose buttons or other means within the app to test purchases that trigger upgrades, downgrades, and cross grades.
 
 ## Important Takeaways
 - Subscriptions renew at an accelerated rate in sandbox
