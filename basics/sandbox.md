@@ -36,6 +36,10 @@ The subscription will automatically renew up to 6 times per account. The actual 
 
 Each automatic renewal is added to the payment queue. The transaction (or transactions, depending on how much time has passed) is processed the next time the app is opened. Make sure you close the app and reopen it to see the updated receipt. If you’re refreshing the receipts server-side, these additional transactions should be visible in the receipt.
 
+## Billing Issues in Sandbox
+
+When testing sandbox subscriptions, Apple will randomly generate billing issues as a test of your app's error handling capabalities. These will only occur for renewals, so you'll always be able to make an initial purchase.
+
 ## Testing Procedures
 
 **Testing renewals and expiration:**
