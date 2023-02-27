@@ -32,7 +32,7 @@ Subscription length has been significantly shortened for testing purposes. This 
 
 (The 3-day duration isn’t documented anywhere but can be found by looking at sandbox transactions.)
 
-The subscription will automatically renew up to 6 times per account. The actual number of renewals is random. After at most 6 renewals, the subscription will automatically stop renewing. These renewals happen automatically whether the app is open or not, just like renewals on the App Store. Unlike on the App Store, there’s no option to unsubscribe or get a refund, so there’s no way to directly test those scenarios. There’s also no way to test subscription management.
+The subscription will automatically renew up to 12 times per account. The actual number of renewals is random. After at most 12 renewals, the subscription will automatically stop renewing. These renewals happen automatically whether the app is open or not, just like renewals on the App Store. Unlike on the App Store, there’s no option to unsubscribe or get a refund, so there’s no way to directly test those scenarios. There’s also no way to test subscription management.
 
 Each automatic renewal is added to the payment queue. The transaction (or transactions, depending on how much time has passed) is processed the next time the app is opened. Make sure you close the app and reopen it to see the updated receipt. If you’re refreshing the receipts server-side, these additional transactions should be visible in the receipt.
 
