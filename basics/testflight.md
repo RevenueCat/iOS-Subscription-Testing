@@ -1,3 +1,5 @@
+# This guide is archived. For current information on this topic, please see [our blog](https://www.revenuecat.com/blog/engineering/the-ultimate-guide-to-subscription-testing-on-ios/).
+
 # TestFlight Testing
 
 An app distributed via TestFlight will automatically use the production sandbox environment for purchases. Users cannot be charged in a TestFlight build, but they can view the paywall and step through the purchase process without actually spending money.

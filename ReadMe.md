@@ -1,3 +1,5 @@
+# This guide is archived. For current information on this topic, please see [our blog](https://www.revenuecat.com/blog/engineering/the-ultimate-guide-to-subscription-testing-on-ios/).
+
 # The Ultimate Guide to Subscription Testing on iOS
 Testing App Store subscriptions is incredibly important, but also very hard to do well. Apple’s subscription-related documentation is... um... _lacking_, and Apple has never been great about providing testing resources. This guide will evolve over time as Apple makes changes to subscriptions and we figure out better ways to test. If you see anything that needs to be fixed or have anything to add, **please submit a pull request!**
 

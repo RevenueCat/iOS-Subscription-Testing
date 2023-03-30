@@ -1,3 +1,5 @@
+# This guide is archived. For current information on this topic, please see [our blog](https://www.revenuecat.com/blog/engineering/the-ultimate-guide-to-subscription-testing-on-ios/).
+
 # Production Testing
 
 For an app that has yet to be released on the App Store, getting an early version of the app approved is a great way to test subscriptions.
