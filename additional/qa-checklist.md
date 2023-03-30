@@ -1,3 +1,5 @@
+# This guide is archived. For current information on this topic, please see [our blog](https://www.revenuecat.com/blog/engineering/the-ultimate-guide-to-subscription-testing-on-ios/).
+
 ## QA Checklist
 
 ### Developer Sandbox Testing

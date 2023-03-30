@@ -1,3 +1,5 @@
+# This guide is archived. For current information on this topic, please see [our blog](https://www.revenuecat.com/blog/engineering/the-ultimate-guide-to-subscription-testing-on-ios/).
+
 # Communicating with TestFlight Beta Testers
 
 Because of the limitations of testing subscriptions with TestFlight (especially the short duration of subscriptions in the production sandbox), many developers choose to automatically unlock all features for beta testers.

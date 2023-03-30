@@ -1,3 +1,5 @@
+# This guide is archived. For current information on this topic, please see [our blog](https://www.revenuecat.com/blog/engineering/the-ultimate-guide-to-subscription-testing-on-ios/).
+
 # Testing Free Trials and Other Introductory Offers
 
 Since free trials are a type of introductory offer, most subscription app developers use this feature even if they don’t realize it.

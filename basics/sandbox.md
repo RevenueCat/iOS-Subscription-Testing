@@ -1,3 +1,5 @@
+# This guide is archived. For current information on this topic, please see [our blog](https://www.revenuecat.com/blog/engineering/the-ultimate-guide-to-subscription-testing-on-ios/).
+
 # Sandbox Testing
 
 To test in the developer sandbox, the app has to be built as a developer build in Xcode. Developers often use this to quickly test on-device during the development process, but you can also provision devices and distribute developer builds to QA and other internal testers without having to go through TestFlight and their beta app review. To prevent apps from being distributed widely outside the App Store, Apple limits device provisioning to 100 per device type (iPhone, iPad, Apple Watch, Apple TV, and Mac) for a total of 500 devices.
